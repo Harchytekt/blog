@@ -1,3 +1,11 @@
+html {
+    height: 100vh;
+}
+
+body {
+    min-height: 100vh;
+}
+
 body > header {
     font-family: Chalkduster, cursive;
     font-size: 2rem;
@@ -15,6 +23,7 @@ body > article {
     margin: 0 auto;
     max-width: 880px;
     padding: 40px 40px 0;
+    min-height: 100%;
 }
 
 body > footer {
