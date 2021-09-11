@@ -1,0 +1,104 @@
+body > header {
+    font-family: Chalkduster, cursive;
+    font-size: 2rem;
+}
+
+body > header {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 880px;
+    padding: 0 40px;
+}
+
+body > article {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 880px;
+    padding: 40px 40px 0;
+}
+
+body > footer {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    /*letter-spacing: -3px;*/
+    font-family: "Courier New", monospace;
+    opacity: 25%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#link {
+    display: inline-block;
+    padding: 5px;
+    border: #F4F4F4 1px solid;
+    border-radius: 7px;
+    cursor: none;
+}
+
+#link:hover {
+    border-color: #EDEDED;
+    background-color: #EDEDED;
+}
+
+#popup {
+    display: none;
+    position: absolute;
+    top: 267px;
+    left: 336px;
+    z-index: 99;
+    height: 300px;
+    width: 400px;
+    padding: 20px;
+    border-bottom: none;
+    overflow: auto;
+    border-radius: 15px;
+    /*box-shadow: 8px 31px 16px rgba(0, 0, 0, 0.16);*/
+    background-color: #FFF;
+    /*-webkit-backdrop-filter: blur(10px);*/
+    /*backdrop-filter: blur(10px);*/
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#tpopup {
+    display: none;
+    position: absolute;
+    /*top: 267px;*/
+    /*left: 336px;*/
+    z-index: 99;
+    height: 300px;
+    width: 400px;
+    padding: 0;
+    border-bottom: none;
+    overflow: auto;
+    border-radius: 15px;
+    /*box-shadow: 8px 31px 16px rgba(0, 0, 0, 0.16);*/
+    background-color: #FFF;
+    /*-webkit-backdrop-filter: blur(10px);*/
+    /*backdrop-filter: blur(10px);*/
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    border: none;
+    height: 300px;
+    width: 400px;
+    border-radius: 15px;
+    /*box-shadow: 8px 31px 16px rgba(0, 0, 0, 0.16);*/
+    background-color: #FFF;
+    /*-webkit-backdrop-filter: blur(10px);*/
+    /*backdrop-filter: blur(10px);*/
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
