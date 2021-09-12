@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le coin de Ducobu</title>
     <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="style_grid.css"/>
 </head>
 <body>
 <header>
@@ -49,7 +48,8 @@
         <p>Once the web page is complete this will read something different and more relevant. At some point someone
             will replace this block of text with useful words so customers can learn more about the products and
             services you offer! A web developer will often use filler text so they can focus on the design of the web
-            page. It will be replaced with <a href="posts/4.php"><span id="link">real</span></a> content later. </p>
+            page. It will be replaced with <a href="posts/4.php"><span id="link" class="internalLink">real</span></a>
+            content later. </p>
         <p>At some point someone will replace this block of text with useful words so customers can learn more about the
             products and services you offer! Don't waste too much of your time reading this placeholder text! This text
             is going to be replaced once the web page is completed. </p>
