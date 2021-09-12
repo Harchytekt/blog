@@ -1,3 +1,31 @@
+:root {
+    color-scheme: light dark;
+    --background-color: #FFF;
+    --text-color: #000;
+    --inner-link-text-color: #2AB77E;
+    --outer-link-text-color: #FF7518;
+    --popup-box-shadow-color: rgba(0, 0, 0, 0.1);
+    --body-fonts: Georgia, serif;
+    --title-fonts: Chalkduster, cursive;
+    --footer-fonts: "Courier New", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #202020;
+        --text-color: #BABABA;
+        --popup-box-shadow-color: rgba(176, 176, 176, 0.16);
+    }
+}
+
+html,
+body {
+    background-color: var(--background-color);
+    font-family: var(--body-fonts);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
 html {
     height: 100vh;
 }
@@ -9,7 +37,7 @@ body {
 }
 
 body > header {
-    font-family: Chalkduster, cursive;
+    font-family: var(--title-fonts);
     font-size: 2rem;
 }
 
@@ -25,13 +53,14 @@ body > article {
     margin: 0 auto;
     max-width: 880px;
     padding: 40px 40px 0;
+    font-size: 1.1rem;
 }
 
 body > footer {
     writing-mode: vertical-rl;
     text-orientation: upright;
     /*letter-spacing: -3px;*/
-    font-family: "Courier New", monospace;
+    font-family: var(--footer-fonts);
     opacity: 25%;
 }
 
@@ -42,39 +71,45 @@ h1 {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
 }
 
 #link {
     display: inline-block;
-    padding: 5px;
-    border: #F4F4F4 1px solid;
-    border-radius: 7px;
-    cursor: none;
+    position: relative;
 }
 
-#link:hover {
-    border-color: #EDEDED;
-    background-color: #EDEDED;
+#link.internalLink {
+    color: var(--inner-link-text-color);
 }
 
-#popup {
-    display: none;
+#link.externalLink {
+    color: var(--outer-link-text-color);
+}
+
+#link:after {
+    content: '';
     position: absolute;
-    top: 267px;
-    left: 336px;
-    z-index: 99;
-    height: 300px;
-    width: 400px;
-    padding: 20px;
-    border-bottom: none;
-    overflow: auto;
-    border-radius: 15px;
-    /*box-shadow: 8px 31px 16px rgba(0, 0, 0, 0.16);*/
-    background-color: #FFF;
-    /*-webkit-backdrop-filter: blur(10px);*/
-    /*backdrop-filter: blur(10px);*/
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+#link.internalLink:after {
+    background-color: var(--inner-link-text-color);
+}
+
+#link.externalLink:after {
+    background-color: var(--outer-link-text-color);
+}
+
+#link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 #logo {
@@ -82,33 +117,59 @@ a {
     vertical-align: middle;
 }
 
-#tpopup {
+#popup, #tpopup {
     display: none;
     position: absolute;
-    /*top: 267px;*/
-    /*left: 336px;*/
     z-index: 99;
-    height: 300px;
-    width: 400px;
-    padding: 0;
     border-bottom: none;
     overflow: auto;
+}
+
+#popup, #tpopup, iframe {
+    height: 300px;
+    width: 400px;
     border-radius: 15px;
-    /*box-shadow: 8px 31px 16px rgba(0, 0, 0, 0.16);*/
-    background-color: #FFF;
+    background-color: var(--background-color);
     /*-webkit-backdrop-filter: blur(10px);*/
     /*backdrop-filter: blur(10px);*/
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px var(--popup-box-shadow-color);
+}
+
+#popup {
+    padding: 20px;
+}
+
+#tpopup {
+    padding: 0;
 }
 
 iframe {
     border: none;
-    height: 300px;
-    width: 400px;
-    border-radius: 15px;
-    /*box-shadow: 8px 31px 16px rgba(0, 0, 0, 0.16);*/
-    background-color: #FFF;
-    /*-webkit-backdrop-filter: blur(10px);*/
-    /*backdrop-filter: blur(10px);*/
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* GRID */
+
+body > header {
+    grid-area: header;
+    display: grid;
+    align-items: end;
+}
+
+body > article {
+    grid-area: article;
+}
+
+body > footer {
+    grid-area: footer;
+    display: grid;
+    justify-content: center;
+}
+
+body {
+    display: grid;
+    grid-template-columns: [col1-start] 15% [col2-start] auto [col3-start] 15% [col-end];
+    grid-template-rows: [row1-start] 15% [row2-start] auto [row-end];
+    grid-template-areas:
+    ". header ."
+    ". article footer";
 }
