@@ -20,7 +20,7 @@ $(document).ready(function () {
         setPopupPosition($(this), false);
         $("#externalPopup").show();
         currentExternalLink = $(this);
-    });
+    }).append(` ${iconExternalLinks}`);
     $("#externalPopup").mouseenter(function () {
         setPopupPosition(currentExternalLink, false);
         $($(this)).show();
