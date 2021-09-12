@@ -78,39 +78,11 @@
 
 <footer>Le coin de Ducobu @ 2021</footer>
 
-<!--<div id="tpopup"><iframe src="https://sixcolors.com"></iframe></div>-->
-<div id="popup"><?php include("posts/1.php"); ?></div>
-<script>
-    document.getElementById("link").addEventListener("mouseover", mouseOver);
-    document.getElementById("popup").addEventListener("mouseover", mouseOver);
-    document.getElementById("link").addEventListener("mouseout", mouseOut);
-    document.getElementById("popup").addEventListener("mouseout", mouseOut);
-    document.getElementById("link").addEventListener("mouseover", getPoint);
-
-    function mouseOver() {
-        document.getElementById("popup").style.display = "block";
-    }
-
-    function mouseOut() {
-        document.getElementById("popup").style.display = "none";
-    }
-
-    function getPoint() {
-        var target = document.getElementById("link");
-
-        var targetTextRectangle = target.getBoundingClientRect();
-
-        console.log("logo's top pos.:", targetTextRectangle.top);
-        console.log("logo's left pos.:", targetTextRectangle.left);
-        console.log("logo's right pos.:", targetTextRectangle.right);
-
-        /*console.log(
-            "Co-ordinate of the element:" +
-            " (" + target.offsetLeft + ", "
-            + target.offsetTop + ")");*/
-        document.getElementById("popup").style.top = `${targetTextRectangle.top}px`;
-        document.getElementById("popup").style.left = `${targetTextRectangle.right}px`;
-    }
-</script>
+<div id="externalPopup">
+    <iframe></iframe>
+</div>
+<div id="internalPopup"></div>
+<script src="libraries/jquery-3.6.0.min.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>

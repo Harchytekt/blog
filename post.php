@@ -39,7 +39,7 @@
 </header>
 <article>
     <header>
-        <h1>Titre Post</h1>
+        <h1>Post</h1>
         <blockquote>
             Alexandre Ducobu — Brouillon — 09/09/2021 - 11/09/2021
         </blockquote>
