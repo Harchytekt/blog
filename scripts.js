@@ -30,11 +30,14 @@ $(document).ready(function () {
     });
 
     function setPopupPosition(link, isInternal) {
-        const top = link.position().top;
-        const left = link.offset().left + link.width();
+        const viewportHeight = $(window).height();
+        const viewportWidth = $(window).width();
+        let top = link.position().top;
+        let left = link.offset().left;
+        const right = link.offset().left + link.width();
         const id = isInternal ? "#internalPopup" : "#externalPopup";
-        $(id).css("top", top)
-            .css("left", left);
+        $(id).css("top", top + 300 >= viewportHeight - 20 ? top - 280 : top)
+            .css("left", left + 400 >= viewportWidth - 20 ? left - 400 : right);
     }
 
     function getPost(postName) {
