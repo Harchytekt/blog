@@ -95,20 +95,29 @@ a {
     height: 2px;
     bottom: 0;
     left: 0;
-    transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
 
 .internalLink:after {
     background-color: var(--inner-link-text-color);
+    transform-origin: bottom left;
 }
 
 .externalLink:after {
     background-color: var(--outer-link-text-color);
+    transform-origin: bottom right;
 }
 
 .internalLink:hover:after, .externalLink:hover:after {
     transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.internalLink:hover:after {
+    transform-origin: bottom right;
+}
+
+.externalLink:hover:after {
     transform-origin: bottom left;
 }
 
