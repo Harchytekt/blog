@@ -44,6 +44,7 @@ $(document).ready(function () {
             data: $.param({"blogPost": postName}),
             success: function (response) {
                 $("#internalPopup").html(response.content);
+                $("#internalPopup * .externalLink").append(` ${iconExternalLinks}`);
             },
             error: function () {
                 $("#internalPopup").html("<h1>An error occurred!</h1>");
