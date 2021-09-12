@@ -45,8 +45,7 @@
         <p>Once the web page is complete this will read something different and more relevant. At some point someone
             will replace this block of text with useful words so customers can learn more about the products and
             services you offer! A web developer will often use filler text so they can focus on the design of the web
-            page. It will be replaced with <a href="post.php"><span id="link"
-                                                                    class="internalLink">real content later</span></a>.
+            page. It will be replaced with <a href="posts/1.php"><span aria-label="1" class="internalLink">real content later</span></a>.
         </p>
         <p>At some point someone will replace this block of text with useful words so customers can learn more about the
             products and services you offer! Don't waste too much of your time reading this placeholder text! This text
@@ -63,8 +62,10 @@
             need to see what a page design looks like, but the actual content isn't available. It's like having someone
             with identical measurements check the fit of a dress before trying it on yourself. </p>
         <p>You are currently reading text that is written in English, not Latin. What you are reading now is not what
-            you will be reading in this space once this <a href="post.php"><span id="link"
-                                                                                 class="externalLink">web page</span></a>
+            you will be reading in this space once this <a
+                    href="https://sixcolors.com/link/2021/09/what-does-it-all-mean/"><span
+                        aria-label="https://sixcolors.com/link/2021/09/what-does-it-all-mean/"
+                        class="externalLink">web page</span></a>
             is completed. Once the web page is complete this will
             read something different and more relevant. </p>
         <p>We aren't quite sure what to put here yet. Once the final copy for the web page has been created, it will go
