@@ -62,15 +62,20 @@
     }
 
     function getPoint() {
-        var target = document
-            .getElementById("link");
+        var target = document.getElementById("link");
 
-        console.log(
+        var targetTextRectangle = target.getBoundingClientRect();
+
+        console.log("logo's top pos.:", targetTextRectangle.top);
+        console.log("logo's left pos.:", targetTextRectangle.left);
+        console.log("logo's right pos.:", targetTextRectangle.right);
+
+        /*console.log(
             "Co-ordinate of the element:" +
             " (" + target.offsetLeft + ", "
-            + target.offsetTop + ")");
-        document.getElementById("tpopup").style.top = `${target.offsetTop}px`;
-        document.getElementById("tpopup").style.left = `${target.offsetLeft + 30}px`;
+            + target.offsetTop + ")");*/
+        document.getElementById("tpopup").style.top = `${targetTextRectangle.top}px`;
+        document.getElementById("tpopup").style.left = `${targetTextRectangle.right}px`;
     }
 </script>
 </body>
