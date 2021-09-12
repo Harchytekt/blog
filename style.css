@@ -112,6 +112,15 @@ a {
     transform-origin: bottom left;
 }
 
+.externalLink svg {
+    height: 1rem;
+    width: 1rem;
+}
+
+.externalLink svg * {
+    fill: var(--outer-link-text-color);
+}
+
 #logo {
     display: inline-block;
     vertical-align: middle;

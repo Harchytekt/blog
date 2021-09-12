@@ -39,7 +39,7 @@ $(document).ready(function () {
 
     function getPost(postName) {
         $.ajax({
-            url: 'retrieve_post.php',
+            url: `../retrieve_post.php`,
             type: 'POST',
             data: $.param({"blogPost": postName}),
             success: function (response) {
