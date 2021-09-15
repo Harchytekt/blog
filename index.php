@@ -63,6 +63,7 @@
 <script src="libraries/jquery-3.6.0.min.js"></script>
 <script>
     const iconExternalLinks = <?= json_encode(file_get_contents("external-link.svg")) ?>;
+    const iconInternalLinks = <?= json_encode(file_get_contents("internal-link.svg")) ?>;
 </script>
 <script src="scripts.js"></script>
 </body>

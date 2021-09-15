@@ -5,7 +5,7 @@ $(document).ready(function () {
         setPopupPosition($(this), true);
         $("#internalPopup").show();
         currentInternalLink = $(this);
-    });
+    }).append(` ${iconInternalLinks}`);
     $("#internalPopup").mouseenter(function () {
         setPopupPosition(currentInternalLink, true);
         $($(this)).show();
@@ -48,6 +48,7 @@ $(document).ready(function () {
             success: function (response) {
                 $("#internalPopup").html(response.content);
                 $("#internalPopup * .externalLink").append(` ${iconExternalLinks}`);
+                $("#internalPopup * .internalLink").append(` ${iconInternalLinks}`);
             },
             error: function () {
                 $("#internalPopup").html("<h1>An error occurred!</h1>");

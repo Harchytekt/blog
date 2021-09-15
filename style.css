@@ -121,13 +121,17 @@ a {
     transform-origin: bottom left;
 }
 
-.externalLink svg {
+.externalLink svg, .internalLink svg {
     height: 1rem;
     width: 1rem;
 }
 
 .externalLink svg * {
     fill: var(--outer-link-text-color);
+}
+
+.internalLink svg * {
+    fill: var(--inner-link-text-color);
 }
 
 #logo {
