@@ -134,6 +134,29 @@ a {
     fill: var(--inner-link-text-color);
 }
 
+.internalLink:hover svg * .arrow, .externalLink:hover svg * .arrow {
+    -webkit-animation: pulse 500ms infinite alternate;
+    animation: pulse 500ms infinite alternate;
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        opacity: 0.2
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.2
+    }
+    100% {
+        opacity: 1
+    }
+}
+
 #logo {
     display: inline-block;
     vertical-align: middle;
