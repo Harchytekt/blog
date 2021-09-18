@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le coin de Ducobu</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="Themes/First/fonts.css"/>
+    <link rel="stylesheet" href="Themes/First/style.css"/>
 </head>
 <body>
 <header>
@@ -65,6 +66,6 @@
     const iconExternalLinks = <?= json_encode(file_get_contents("external-link.svg")) ?>;
     const iconInternalLinks = <?= json_encode(file_get_contents("internal-link.svg")) ?>;
 </script>
-<script src="scripts.js"></script>
+<script src="Themes/First/scripts.js"></script>
 </body>
 </html>

@@ -1,12 +1,14 @@
 :root {
     color-scheme: light dark;
     --background-color: #FFF;
-    --text-color: #000;
+    --text-color: #334259;
+    --initial-letter-color: #000;
     --inner-link-text-color: #2AB77E;
     --outer-link-text-color: #FF7518;
     --popup-box-shadow-color: rgba(0, 0, 0, 0.1);
-    --body-fonts: Georgia, serif;
-    --title-fonts: Chalkduster, cursive;
+    --title-fonts: Fraunces, serif;
+    --header-fonts: Recursive, sans-serif;
+    --body-fonts: "Roboto Slab", serif;
     --footer-fonts: "Courier New", monospace;
 }
 
@@ -14,6 +16,7 @@
     :root {
         --background-color: #202020;
         --text-color: #BABABA;
+        --initial-letter-color: #666;
         --popup-box-shadow-color: rgba(176, 176, 176, 0.16);
     }
 }
@@ -24,6 +27,7 @@ body {
     font-family: var(--body-fonts);
     color: var(--text-color);
     font-size: 1rem;
+    font-weight: 300;
 }
 
 html {
@@ -38,7 +42,8 @@ body {
 
 body > header {
     font-family: var(--title-fonts);
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 400;
 }
 
 body > header {
@@ -52,8 +57,31 @@ body > article {
     width: 100%;
     margin: 0 auto;
     max-width: 880px;
-    padding: 40px 40px 0;
+    padding: 40px 40px;
     font-size: 1.1rem;
+}
+
+body > article #content:first-letter {
+    float: left;
+    font-size: 4em;
+    line-height: 0.65;
+    margin: 0.1em 0.15em 0em 0;
+    color: var(--initial-letter-color);
+    font-family: ui-serif;
+}
+
+@supports (-webkit-initial-letter: 2) {
+    body > article #content:first-letter {
+        -webkit-initial-letter: 2;
+        font-family: var(--body-fonts);
+    }
+}
+
+@supports (initial-letter: 2) {
+    body > article #content:first-letter {
+        initial-letter: 2;
+        font-family: var(--body-fonts);
+    }
 }
 
 body > footer {
@@ -67,6 +95,7 @@ body > footer {
 h1 {
     font-size: 3rem;
     margin: 0;
+    font-family: var(--header-fonts);
 }
 
 a {
