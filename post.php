@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le coin de Ducobu</title>
-    <link rel="stylesheet" href="Themes/First/fonts.css"/>
-    <link rel="stylesheet" href="Themes/First/style.css"/>
+    <link rel="stylesheet" href="Themes/First/css/fonts.css"/>
+    <link rel="stylesheet" href="Themes/First/css/style.css"/>
 </head>
 <body>
 <header>
