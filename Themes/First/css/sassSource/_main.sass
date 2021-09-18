@@ -1,0 +1,59 @@
+/* Main */
+html,
+body
+  background-color: var(--background-color)
+  font-family: var(--body-fonts)
+  color: var(--text-color)
+  font-size: 1rem
+  font-weight: 300
+
+html
+  height: 100vh
+
+body
+  min-height: 100vh
+  padding: 0
+  margin: 0
+
+  > header
+    font-family: var(--title-fonts)
+    font-size: 3rem
+    font-weight: 400
+    width: 100%
+    margin: 0 auto
+    max-width: 880px
+    padding: 0 40px
+
+  > article
+    width: 100%
+    margin: 0 auto
+    max-width: 880px
+    padding: 40px 40px
+    font-size: 1.1rem
+
+    #content:first-letter
+      float: left
+      font-size: 4em
+      line-height: 0.65
+      margin: 0.1em 0.15em 0 0
+      color: var(--initial-letter-color)
+      font-family: ui-serif
+      @supports (-webkit-initial-letter: 2)
+        -webkit-initial-letter: 2
+        initial-letter: 2
+        font-family: var(--body-fonts)
+
+  > footer
+    writing-mode: vertical-rl
+    text-orientation: upright
+    font-family: var(--footer-fonts)
+    opacity: 25%
+
+h1
+  font-size: 3rem
+  margin: 0
+  font-family: var(--header-fonts)
+
+#logo
+  display: inline-block
+  vertical-align: middle

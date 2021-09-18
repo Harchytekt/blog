@@ -1,0 +1,19 @@
+/* Grid */
+body
+  display: grid
+  grid-template-columns: [col1-start] 15% [col2-start] auto [col3-start] 15% [col-end]
+  grid-template-rows: [row1-start] 15% [row2-start] auto [row-end]
+  grid-template-areas: ". header ." ". article footer"
+
+  > header
+    grid-area: header
+    display: grid
+    align-items: end
+
+  > article
+    grid-area: article
+
+  > footer
+    grid-area: footer
+    position: fixed
+    top: 35%

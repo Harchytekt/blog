@@ -1,0 +1,23 @@
+/* Popups */
+#internalPopup, #externalPopup
+  display: none
+  position: absolute
+  z-index: 99
+  border-bottom: none
+  overflow: auto
+
+#internalPopup, #externalPopup, iframe
+  height: 300px
+  width: 400px
+  border-radius: 15px
+  background-color: var(--background-color)
+  box-shadow: 0 2px 8px var(--popup-box-shadow-color)
+
+#internalPopup
+  padding: 20px
+
+#externalPopup
+  padding: 0
+
+iframe
+  border: none
