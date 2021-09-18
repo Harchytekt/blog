@@ -235,8 +235,8 @@ body > article {
 
 body > footer {
     grid-area: footer;
-    display: grid;
-    justify-content: center;
+    position: fixed;
+    top: 35%;
 }
 
 body {
