@@ -19,7 +19,7 @@
 
 <?= $content ?>
 
-<footer>Le coin de Ducobu @ 2021</footer>
+<footer><span>Le coin de Ducobu @ 2021</span></footer>
 
 <div id="externalPopup">
     <iframe></iframe>
