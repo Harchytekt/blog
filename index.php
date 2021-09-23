@@ -10,17 +10,49 @@
         #title:hover .yellow {
             color: #FFDE00;
         }
+
+        nav div {
+            display: inline-block;
+        }
+
+        #darkModeToggle svg * path, #darkModeToggle svg * ellipse,
+
+        ,
+        #search svg * path {
+            fill: #334259;
+        }
+
+        #darkModeToggle svg, #search svg, #darkModeToggle, #search {
+            font-size: 1.5rem;
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+
+        #darkModeToggle, #search {
+            background-color: #E5E5E570;
+            border-radius: 7px;
+            padding: 5px;
+        }
+
+        #darkModeToggle:hover, #search:hover {
+            background-color: #BBBBBB70;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 <header>
-    <a href="index.php">
-        <div id="logo">
-            <?= file_get_contents("Themes/First/img/logo.svg") ?>
-        </div>
-        <span id="title">Le coin de Ducobu</span>
-        <!--        <span id="title">L<span class="yellow">e</span> c<span class="yellow">oi</span>n d<span class="yellow">e</span> D<span class="yellow">u</span>c<span class="yellow">o</span>b<span class="yellow">u</span></span>-->
-    </a>
+    <nav>
+        <a href="index.php">
+            <div id="logo">
+                <?= file_get_contents("Themes/First/img/logo.svg") ?>
+            </div>
+            <span id="title">Le coin de Ducobu</span>
+            <!--        <span id="title">L<span class="yellow">e</span> c<span class="yellow">oi</span>n d<span class="yellow">e</span> D<span class="yellow">u</span>c<span class="yellow">o</span>b<span class="yellow">u</span></span>-->
+        </a>
+        <div id="search"><?= file_get_contents("Themes/First/img/search.svg") ?></div>
+        <div id="darkModeToggle"><?= file_get_contents("Themes/First/img/auto.svg") ?></div>
+    </nav>
 </header>
 <article>
     <header>
