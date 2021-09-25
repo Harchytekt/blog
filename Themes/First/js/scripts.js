@@ -1,13 +1,13 @@
 $(document).ready(function () {
     let appearance = (localStorage.getItem('appearance') !== null) ? localStorage.getItem("appearance") : "auto";
-    let theme = (localStorage.getItem('theme') !== null) ? localStorage.getItem("theme") : "1";
+    let theme = (localStorage.getItem('theme') !== null) ? localStorage.getItem("theme") : "default";
     let isWithPreviews = (localStorage.getItem('previewState') !== null) ? (localStorage.getItem("previewState") === 'true') : true;
 
     let currentInternalLink;
     let currentExternalLink;
 
     $(`#appearance option[value="${appearance}"]`).attr("selected", "selected").change();
-    //$("#theme option[value="${theme}"]`).attr("selected", "selected").change();
+    $(`#theme option[value="${theme}"]`).attr("selected", "selected").change();
     $(`#previews option[value="${isWithPreviews}"]`).attr("selected", "selected").change();
     setSelects();
 
@@ -20,8 +20,8 @@ $(document).ready(function () {
     $("#save").click(function (event) {
         event.preventDefault();
         let tmpAppearance = $("#appearance").val();
-        let previewState = $("#previews").val();
-        console.log($("#theme").val());
+        let tmpTheme = $("#theme").val();
+        let tmpPreview = $("#previews").val();
 
         if ("auto" === tmpAppearance) {
             $("html").attr("data-theme", "");
@@ -30,8 +30,11 @@ $(document).ready(function () {
             $("html").attr("data-theme", tmpAppearance);
             localStorage.setItem("appearance", tmpAppearance);
         }
-        isWithPreviews = ("true" === previewState);
-        localStorage.setItem("previewState", previewState);
+
+        localStorage.setItem("theme", tmpTheme);
+
+        isWithPreviews = ("true" === tmpPreview);
+        localStorage.setItem("previewState", tmpPreview);
     });
 
     // Internal links

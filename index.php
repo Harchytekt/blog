@@ -97,8 +97,8 @@
                     <div class="settingsChoices">
                         <label for="theme">Thème :</label>
                         <select name="" id="theme">
-                            <option value="1">Un (Défaut)</option>
-                            <option value="2">Deux</option>
+                            <option value="default">Défaut</option>
+                            <option value="second">Second</option>
                         </select>
                     </div>
                 </div>
