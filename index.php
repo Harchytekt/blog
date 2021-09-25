@@ -106,8 +106,8 @@
                     <div class="settingsChoices">
                         <label for="previews">Aperçus :</label>
                         <select name="" id="previews">
-                            <option value="active">Activés (Défaut)</option>
-                            <option value="disabled">Désactivés</option>
+                            <option value="true">Activés (Défaut)</option>
+                            <option value="false">Désactivés</option>
                         </select>
                     </div>
                 </div>

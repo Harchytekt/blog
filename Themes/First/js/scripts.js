@@ -1,46 +1,38 @@
 $(document).ready(function () {
-    let isWithPreviews = true;
+    let appearance = (localStorage.getItem('appearance') !== null) ? localStorage.getItem("appearance") : "auto";
+    let theme = (localStorage.getItem('theme') !== null) ? localStorage.getItem("theme") : "1";
+    let isWithPreviews = (localStorage.getItem('previewState') !== null) ? (localStorage.getItem("previewState") === 'true') : true;
+
     let currentInternalLink;
     let currentExternalLink;
 
+    $(`#appearance option[value="${appearance}"]`).attr("selected", "selected").change();
+    //$("#theme option[value="${theme}"]`).attr("selected", "selected").change();
+    $(`#previews option[value="${isWithPreviews}"]`).attr("selected", "selected").change();
+    setSelects();
+
+    if ("auto" === appearance) {
+        $("html").attr("data-theme", "");
+    } else {
+        $("html").attr("data-theme", appearance);
+    }
+
     $("#save").click(function (event) {
         event.preventDefault();
-        let appearance = $("#appearance").val();
+        let tmpAppearance = $("#appearance").val();
         let previewState = $("#previews").val();
         console.log($("#theme").val());
 
-        if ("auto" === appearance) {
+        if ("auto" === tmpAppearance) {
             $("html").attr("data-theme", "");
+            localStorage.setItem("appearance", "auto");
         } else {
-            $("html").attr("data-theme", appearance);
+            $("html").attr("data-theme", tmpAppearance);
+            localStorage.setItem("appearance", tmpAppearance);
         }
-        isWithPreviews = ("active" === previewState);
+        isWithPreviews = ("true" === previewState);
+        localStorage.setItem("previewState", previewState);
     });
-
-    /*const btn = document.querySelector("#theme-toggle");
-    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme == "dark") {
-        document.body.classList.toggle("dark-theme");
-    } else if (currentTheme == "light") {
-        document.body.classList.toggle("light-theme");
-    }
-
-    btn.addEventListener("click", function () {
-        if (prefersDarkScheme.matches) {
-            document.body.classList.toggle("light-theme");
-            var theme = document.body.classList.contains("light-theme")
-                ? "light"
-                : "dark";
-        } else {
-            document.body.classList.toggle("dark-theme");
-            var theme = document.body.classList.contains("dark-theme")
-                ? "dark"
-                : "light";
-        }
-        localStorage.setItem("theme", theme);
-    });*/
 
     // Internal links
     $(".internalLink").mouseenter(function () {
