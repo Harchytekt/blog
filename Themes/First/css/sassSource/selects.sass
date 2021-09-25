@@ -1,0 +1,76 @@
+/* Selects */
+.select-hidden
+  display: none
+  visibility: hidden
+  padding-right: 10px
+
+.select
+  cursor: pointer
+  display: inline-block
+  position: relative
+  font-size: 16px
+  color: #fff
+  width: 220px
+  height: 40px
+  vertical-align: middle
+
+.select-styled
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  color: var(--text-color)
+  background-color: var(--background-color)
+  padding: 8px 15px
+  border-radius: 10px
+  border: 1px var(--text-color) solid
+
+  &:after
+    content:""
+    width: 0
+    height: 0
+    border: 7px solid transparent
+    border-color: var(--text-color) transparent transparent transparent
+    position: absolute
+    top: 16px
+    right: 10px
+
+  &:hover
+    background-color: var(--select-background-color-hover)
+
+  &:active, &.active
+    background-color: var(--select-background-color-hover)
+
+    &:after
+      top: 9px
+      border-color: transparent transparent var(--text-color) transparent
+
+.select-options
+  display: none
+  position: absolute
+  top: 100%
+  right: 0
+  left: 0
+  z-index: 999
+  margin: 0
+  padding: 0
+  list-style: none
+  border-radius: 10px
+  color: var(--text-color)
+  background-color: var(--select-background-color-hover)
+
+  li
+    margin: 0
+    padding: 12px 0
+    text-indent: 15px
+    border-top: 1px solid var(--select-background-color-active)
+    border-radius: 10px
+
+    &:hover
+      background: var(--select-background-color-active)
+      border-radius: 10px
+
+    &[rel="hide"]
+      display: none
+

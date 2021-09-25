@@ -6,6 +6,7 @@
     <title>Le coin de Ducobu</title>
     <link rel="stylesheet" href="Themes/First/css/fonts.css"/>
     <link rel="stylesheet" href="Themes/First/css/style.css"/>
+    <link rel="stylesheet" href="Themes/First/css/selects.css"/>
     <style>
         #title:hover .yellow {
             color: #FFDE00;
@@ -16,8 +17,6 @@
         }
 
         #darkModeToggle svg * path, #darkModeToggle svg * ellipse,
-
-        ,
         #search svg * path {
             fill: #334259;
         }
@@ -38,6 +37,34 @@
             background-color: #BBBBBB70;
             cursor: pointer;
         }
+
+        #settings {
+            /*display: none;*/
+            font-size: 1rem;
+            position: absolute;
+            z-index: 99;
+            border-bottom: none;
+            overflow: auto;
+            height: 300px;
+            width: 400px;
+            border-radius: 15px;
+            background-color: #FFF;
+            box-shadow: 0 0 0 -50px rgba(154, 161, 177, .15), 0 4px 33px -7px rgba(36, 40, 47, .25), 0 4px 19px -27px rgba(91, 94, 105, .15);
+        }
+
+        #settings > form > div {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #settings div * .select {
+            display: inline-block;
+        }
+
+        label {
+            display: inline-block;
+            width: 150px;
+        }
     </style>
 </head>
 <body>
@@ -51,13 +78,49 @@
             <!--        <span id="title">L<span class="yellow">e</span> c<span class="yellow">oi</span>n d<span class="yellow">e</span> D<span class="yellow">u</span>c<span class="yellow">o</span>b<span class="yellow">u</span></span>-->
         </a>
         <div id="search"><?= file_get_contents("Themes/First/img/search.svg") ?></div>
-        <div id="darkModeToggle"><?= file_get_contents("Themes/First/img/auto.svg") ?></div>
+        <div id="darkModeToggle"><?= file_get_contents("Themes/First/img/settings.svg") ?></div>
+        <div id="settings">
+            <form>
+                <h3>Réglages</h3>
+                <div>
+                    <div class="settingsChoices">
+                        <label for="appearance">Apparence :</label>
+                        <select name="" id="appearance">
+                            <option value="auto">Automatique (Défaut)</option>
+                            <option value="light">Clair</option>
+                            <option value="dark">Foncé</option>
+                        </select>
+                        <span class="focus"></span>
+                    </div>
+                </div>
+                <div>
+                    <div class="settingsChoices">
+                        <label for="theme">Thème :</label>
+                        <select name="" id="theme">
+                            <option value="1">Un (Défaut)</option>
+                            <option value="2">Deux</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div class="settingsChoices">
+                        <label for="previews">Aperçus :</label>
+                        <select name="" id="previews">
+                            <option value="active">Activés (Défaut)</option>
+                            <option value="disabled">Désactivés</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="save">Enregistrer</button>
+            </form>
+        </div>
     </nav>
 </header>
 <article>
     <header>
         <h1>Bienvenue !</h1>
     </header>
+    <button id="theme-toggle">Toggle Dark-Mode</button>
     <div id="content">
         <p>Once the web page is complete this will read something different and more relevant. At some point someone
             will replace this block of text with useful words so customers can learn more about the products and
@@ -105,5 +168,6 @@
     const iconInternalLinks = <?= json_encode(file_get_contents("Themes/First/img/internal-link.svg")) ?>;
 </script>
 <script src="Themes/First/js/scripts.js"></script>
+<script src="Themes/First/js/selects.js"></script>
 </body>
 </html>
