@@ -167,6 +167,5 @@
     const iconInternalLinks = <?= json_encode(file_get_contents("Themes/First/img/internal-link.svg")) ?>;
 </script>
 <script src="Themes/First/js/scripts.js"></script>
-<script src="Themes/First/js/selects.js"></script>
 </body>
 </html>
