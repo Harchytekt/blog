@@ -120,7 +120,6 @@
     <header>
         <h1>Bienvenue !</h1>
     </header>
-    <button id="theme-toggle">Toggle Dark-Mode</button>
     <div id="content">
         <p>Once the web page is complete this will read something different and more relevant. At some point someone
             will replace this block of text with useful words so customers can learn more about the products and

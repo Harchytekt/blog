@@ -2,8 +2,9 @@
 body
   display: grid
   grid-template-columns: [col1-start] 15vw [col2-start] auto [col3-start] 15vw [col-end]
-  grid-template-rows: [row1-start] 15vh [row2-start] auto [row-end]
+  grid-template-rows: [row1-start] 150px [row2-start] auto [row-end]
   grid-template-areas: ". header ." ". article footer"
+  align-items: self-start
 
   > header
     grid-area: header
