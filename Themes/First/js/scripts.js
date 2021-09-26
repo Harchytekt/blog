@@ -18,6 +18,7 @@ $(document).ready(function () {
     }
 
     $("#settings").click(function () {
+        setPopupPosition($(this), -1);
         $("#settingsPopup").slideToggle();
     });
 
@@ -46,13 +47,13 @@ $(document).ready(function () {
     $(".internalLink").mouseenter(function () {
         if (isWithPreviews) {
             getPost($(this).attr("aria-label"));
-            setPopupPosition($(this), true);
+            setPopupPosition($(this), 1);
             $("#internalPopup").show();
             currentInternalLink = $(this);
         }
     }).append(` ${iconInternalLinks}`);
     $("#internalPopup").mouseenter(function () {
-        setPopupPosition(currentInternalLink, true);
+        setPopupPosition(currentInternalLink, 1);
         $($(this)).show();
     });
     $(".internalLink, #internalPopup").mouseleave(function () {
@@ -64,13 +65,13 @@ $(document).ready(function () {
     $(".externalLink").mouseenter(function () {
         if (isWithPreviews) {
             $("#externalPopup iframe").attr('src', $(this).attr("aria-label"));
-            setPopupPosition($(this), false);
+            setPopupPosition($(this), 0);
             $("#externalPopup").show();
             currentExternalLink = $(this);
         }
     }).append(` ${iconExternalLinks}`);
     $("#externalPopup").mouseenter(function () {
-        setPopupPosition(currentExternalLink, false);
+        setPopupPosition(currentExternalLink, 0);
         $($(this)).show();
     });
     $(".externalLink, #externalPopup").mouseleave(function () {
@@ -83,9 +84,19 @@ $(document).ready(function () {
         let top = link.position().top;
         let left = link.offset().left;
         const right = link.offset().left + link.width();
-        const id = isInternal ? "#internalPopup" : "#externalPopup";
-        $(id).css("top", top + 300 >= viewportHeight - 20 ? top - 280 : top)
-            .css("left", left + 400 >= viewportWidth - 20 ? left - 400 : right);
+        if (isInternal >= 0) {
+            let id;
+            if (isInternal === 1) {
+                id = "#internalPopup";
+            } else if (isInternal === 0) {
+                id = "#externalPopup";
+            }
+            $(id).css("top", top + 300 >= viewportHeight - 20 ? top - 280 : top)
+                .css("left", left + 400 >= viewportWidth - 20 ? left - 400 : right);
+        } else {
+            $("#settingsPopup").css("top", top + 42)
+                .css("left", left - 325);
+        }
     }
 
     function getPost(postName) {
