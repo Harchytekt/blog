@@ -24,6 +24,9 @@ body
     max-width: 880px
     padding: 0 40px
 
+    nav div
+      display: inline-block
+
   > article
     width: 100%
     margin: 0 auto
@@ -64,3 +67,22 @@ h1
 #logo
   display: inline-block
   vertical-align: middle
+
+
+#settings svg, #search svg, #settings, #search
+  font-size: 1.5rem
+  height: 1.5rem
+  width: 1.5rem
+
+#settings svg * path, #settings svg * ellipse,
+#search svg * path
+  fill: var(--text-color)
+
+#settings, #search
+  background-color: var(--nav-item-background-color)
+  border-radius: 7px
+  padding: 5px
+
+  &:hover
+    background-color: var(--nav-item-background-color-hover)
+    cursor: pointer

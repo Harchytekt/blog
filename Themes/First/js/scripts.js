@@ -17,8 +17,13 @@ $(document).ready(function () {
         $("html").attr("data-theme", appearance);
     }
 
+    $("#settings").click(function () {
+        $("#settingsPopup").slideToggle();
+    });
+
     $("#save").click(function (event) {
         event.preventDefault();
+        $("#settingsPopup").slideUp();
         let tmpAppearance = $("#appearance").val();
         let tmpTheme = $("#theme").val();
         let tmpPreview = $("#previews").val();

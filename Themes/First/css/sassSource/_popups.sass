@@ -1,17 +1,17 @@
 /* Popups */
-#internalPopup, #externalPopup
+#internalPopup, #externalPopup, #settingsPopup
   display: none
   position: absolute
   z-index: 99
   border-bottom: none
   overflow: auto
 
-#internalPopup, #externalPopup, iframe
+#internalPopup, #externalPopup, iframe, #settingsPopup
   height: 300px
   width: 400px
   border-radius: 15px
   background-color: var(--background-color)
-  box-shadow: 0 0 0 -50px rgba(154, 161, 177, .15), 0 4px 33px -7px rgba(36, 40, 47, .25), 0 4px 19px -27px rgba(91, 94, 105, .15)
+  box-shadow: 0 0 0 -50px var(--popup-box-shadow-color-1), 0 4px 33px -7px var(--popup-box-shadow-color-2), 0 4px 19px -27px var(--popup-box-shadow-color-3)
 
 #internalPopup
   padding: 20px
@@ -21,3 +21,45 @@
 
 iframe
   border: none
+
+#settingsPopup
+  font-size: 1rem
+  padding: 20px
+  height: 210px
+  width: 320px
+
+  > form
+    h3
+      margin-top: unset
+
+    > div
+      display: block
+      margin-bottom: 10px
+
+    *
+      .select
+        display: inline-block
+
+      .settingsChoices label
+        display: inline-block
+        width: 100px
+
+    #buttonParent
+      text-align: center
+      margin-top: 30px
+
+      button
+        font-family: inherit
+        font-size: inherit
+        color: var(--text-color)
+        background-color: var(--background-color)
+        padding: 4px 15px
+        border-radius: 6px
+        border: 1px var(--text-color) solid
+
+        &:hover
+          cursor: pointer
+          background-color: var(--select-background-color-hover)
+
+        &:active, &.active
+          background-color: var(--select-background-color-hover)

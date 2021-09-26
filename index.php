@@ -11,60 +11,6 @@
         #title:hover .yellow {
             color: #FFDE00;
         }
-
-        nav div {
-            display: inline-block;
-        }
-
-        #darkModeToggle svg * path, #darkModeToggle svg * ellipse,
-        #search svg * path {
-            fill: #334259;
-        }
-
-        #darkModeToggle svg, #search svg, #darkModeToggle, #search {
-            font-size: 1.5rem;
-            height: 1.5rem;
-            width: 1.5rem;
-        }
-
-        #darkModeToggle, #search {
-            background-color: #E5E5E570;
-            border-radius: 7px;
-            padding: 5px;
-        }
-
-        #darkModeToggle:hover, #search:hover {
-            background-color: #BBBBBB70;
-            cursor: pointer;
-        }
-
-        #settings {
-            /*display: none;*/
-            font-size: 1rem;
-            position: absolute;
-            z-index: 99;
-            border-bottom: none;
-            overflow: auto;
-            height: 300px;
-            width: 400px;
-            border-radius: 15px;
-            background-color: #FFF;
-            box-shadow: 0 0 0 -50px rgba(154, 161, 177, .15), 0 4px 33px -7px rgba(36, 40, 47, .25), 0 4px 19px -27px rgba(91, 94, 105, .15);
-        }
-
-        #settings > form > div {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        #settings div * .select {
-            display: inline-block;
-        }
-
-        label {
-            display: inline-block;
-            width: 150px;
-        }
     </style>
 </head>
 <body>
@@ -78,8 +24,8 @@
             <!--        <span id="title">L<span class="yellow">e</span> c<span class="yellow">oi</span>n d<span class="yellow">e</span> D<span class="yellow">u</span>c<span class="yellow">o</span>b<span class="yellow">u</span></span>-->
         </a>
         <div id="search"><?= file_get_contents("Themes/First/img/search.svg") ?></div>
-        <div id="darkModeToggle"><?= file_get_contents("Themes/First/img/settings.svg") ?></div>
-        <div id="settings">
+        <div id="settings"><?= file_get_contents("Themes/First/img/settings.svg") ?></div>
+        <div id="settingsPopup">
             <form>
                 <h3>Réglages</h3>
                 <div>
@@ -111,7 +57,9 @@
                         </select>
                     </div>
                 </div>
-                <button id="save">Enregistrer</button>
+                <div id="buttonParent">
+                    <button id="save">Enregistrer</button>
+                </div>
             </form>
         </div>
     </nav>
