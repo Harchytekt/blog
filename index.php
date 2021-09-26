@@ -6,7 +6,6 @@
     <title>Le coin de Ducobu</title>
     <link rel="stylesheet" href="Themes/First/css/fonts.css"/>
     <link rel="stylesheet" href="Themes/First/css/style.css"/>
-    <link rel="stylesheet" href="Themes/First/css/selects.css"/>
     <style>
         #title:hover .yellow {
             color: #FFDE00;
