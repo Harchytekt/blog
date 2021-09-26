@@ -21,6 +21,20 @@
             yet. This text is only here to show you what it looks when there is text in this area of the web page. If
             the creator of this web page knew what to put here, they would probably not have to paste text like this
             here at all. </p>
+        <p>This text isn’t going to remain here because it doesn't pertain to the web page. A web developer will often
+            use filler text so they can focus on the design of the web page. It will be replaced with real content
+            later. Some common names for what you are reading are: filler text, placeholder text, and dummy text. </p>
+        <p>You are currently reading text that is written in English, not Latin. We aren't quite sure what to put here
+            yet. This text is only here to show you what it looks when there is text in this area of the web page. If
+            the creator of this web page knew what to put here, they would probably not have to paste text like this
+            here at all. </p>
+        <p>This text isn’t going to remain here because it doesn't pertain to the web page. A web developer will often
+            use filler text so they can focus on the design of the web page. It will be replaced with real content
+            later. Some common names for what you are reading are: filler text, placeholder text, and dummy text. </p>
+        <p>You are currently reading text that is written in English, not Latin. We aren't quite sure what to put here
+            yet. This text is only here to show you what it looks when there is text in this area of the web page. If
+            the creator of this web page knew what to put here, they would probably not have to paste text like this
+            here at all. </p>
         <p>Once the web page is complete this will read something different and more relevant. This text is only here to
             show you what it looks when there is text in this area of the web page. Placeholder text is useful when you
             need to see what a page design looks like, but the actual content isn't available. It's like having someone
