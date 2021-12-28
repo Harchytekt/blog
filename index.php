@@ -6,6 +6,19 @@
     <title>Le coin de Ducobu</title>
     <link rel="stylesheet" href="Themes/First/css/fonts.css"/>
     <link rel="stylesheet" href="Themes/First/css/style.css"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="Themes/First/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152"
+          href="Themes/First/favicons/apple-touch-icon-152x152-precomposed.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Themes/First/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120"
+          href="Themes/First/favicons/apple-touch-icon-120x120-precomposed.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Themes/First/favicons/apple-touch-icon-76x76-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76"
+          href="Themes/First/favicons/apple-touch-icon-76x76-precomposed.png">
+    <link rel="apple-touch-icon" href="Themes/First/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="Themes/First/favicons/apple-touch-icon-precomposed.png">
+    <link rel="mask-icon" sizes="any" href="Themes/First/favicons/logo-shape-black.svg" color="#2AB77E">
+    <link rel="icon" type="image/png" href="Themes/First/favicons/favicon.png">
     <style>
         #title:hover .yellow {
             color: #FFDE00;
@@ -24,7 +37,7 @@
         </a>
         <div id="buttons">
             <div id="search"><?= file_get_contents("Themes/First/img/search.svg") ?></div>
-            <div id="settings"><?= file_get_contents("Themes/First/img/settings.svg") ?></div>
+            <div id="settings" title="Menu de réglages"><?= file_get_contents("Themes/First/img/settings.svg") ?></div>
         </div>
         <div id="settingsPopup">
             <form>
@@ -110,6 +123,7 @@
     <iframe></iframe>
 </div>
 <div id="internalPopup"></div>
+<div id="footnotePopup"></div>
 <script src="libraries/jquery-3.6.0.min.js"></script>
 <script>
     const iconExternalLinks = <?= json_encode(file_get_contents("Themes/First/img/external-link.svg")) ?>;
