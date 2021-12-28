@@ -32,8 +32,6 @@
             <div id="logo">
                 <?= file_get_contents("Themes/First/img/logo.svg") ?>
             </div>
-            <span id="title">Le coin de Ducobu</span>
-            <!--        <span id="title">L<span class="yellow">e</span> c<span class="yellow">oi</span>n d<span class="yellow">e</span> D<span class="yellow">u</span>c<span class="yellow">o</span>b<span class="yellow">u</span></span>-->
         </a>
         <div id="buttons">
             <div id="search"><?= file_get_contents("Themes/First/img/search.svg") ?></div>
