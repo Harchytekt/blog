@@ -43,15 +43,6 @@ $(document).ready(function () {
         localStorage.setItem("previewState", tmpPreview);
     });
 
-    // Logo
-    $("#logo").mouseenter(function () {
-        $("#volutes path").css("fill", "#FF7518");
-        $("#cup path").css("fill", "#2AB77E");
-    }).mouseleave(function () {
-        $("#volutes path").css("fill", "");
-        $("#cup path").css("fill", "");
-    });
-
     // Internal links
     $(".internalLink").mouseenter(function () {
         if (isWithPreviews) {
