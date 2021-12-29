@@ -31,9 +31,15 @@
             </div>
         </a>
         <div id="buttons">
-            <div id="search"><?= file_get_contents("../Themes/First/img/search.svg") ?></div>
+            <div id="search"
+                 title="Recherche (alt + f)"><?= file_get_contents("../Themes/First/img/search.svg") ?></div>
             <div id="settings"
-                 title="Menu de réglages"><?= file_get_contents("../Themes/First/img/settings.svg") ?></div>
+                 title="Menu de réglages (alt + r)"><?= file_get_contents("../Themes/First/img/settings.svg") ?></div>
+        </div>
+        <div id="searchPopup">
+            <form>
+                <input type="text" id="searchField" placeholder="Recherche + ⏎">
+            </form>
         </div>
         <div id="settingsPopup">
             <form>

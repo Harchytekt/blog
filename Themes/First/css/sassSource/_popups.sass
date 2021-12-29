@@ -1,12 +1,12 @@
 /* Popups */
-#internalPopup, #externalPopup, #settingsPopup
+#internalPopup, #externalPopup, #settingsPopup, #searchPopup
   display: none
   position: absolute
   z-index: 99
   border-bottom: none
   overflow: auto
 
-#internalPopup, #externalPopup, iframe, #settingsPopup
+#internalPopup, #externalPopup, iframe, #settingsPopup, #searchPopup
   height: 300px
   width: 400px
   border-radius: 15px
@@ -21,6 +21,25 @@
 
 iframe
   border: none
+
+#searchPopup
+  font-size: 1rem
+  padding: 20px
+  height: auto
+  width: 100%
+  max-width: 840px
+
+  > form input
+    width: -webkit-fill-available
+    width: -moz-available
+    width: stretch
+    padding: .375rem .75rem
+    font-size: 1rem
+    line-height: 1.5
+    border: 1px solid #ced4da
+    border-radius: .25rem
+    display: block
+    margin: 0 auto
 
 #settingsPopup
   font-size: 1rem
