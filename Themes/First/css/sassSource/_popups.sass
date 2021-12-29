@@ -12,6 +12,7 @@
   border-radius: 15px
   background-color: var(--background-color)
   box-shadow: 0 0 0 -50px var(--popup-box-shadow-color-1), 0 4px 33px -7px var(--popup-box-shadow-color-2), 0 4px 19px -27px var(--popup-box-shadow-color-3)
+  /*0 0 0 -50px #41414126,0 4px 33px -7px #69696940,0 4px 19px -27px #5b5b5b26*/
 
 #internalPopup
   padding: 20px
@@ -36,10 +37,12 @@ iframe
     padding: .375rem .75rem
     font-size: 1rem
     line-height: 1.5
-    border: 1px solid #ced4da
+    border: 1px var(--text-color) solid
     border-radius: .25rem
     display: block
     margin: 0 auto
+    background-color: var(--background-color)
+    color: var(--text-color)
 
 #settingsPopup
   font-size: 1rem

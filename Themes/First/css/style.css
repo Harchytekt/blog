@@ -24,9 +24,9 @@ html[data-theme=dark] {
     --initial-letter-color: #666;
     --nav-item-background-color: #60606070;
     --nav-item-background-color-hover: #52525270;
-    --popup-box-shadow-color-1: #9AA1B126;
-    --popup-box-shadow-color-2: #4c515d40;
-    --popup-box-shadow-color-3: #82879826;
+    --popup-box-shadow-color-1: #000;
+    --popup-box-shadow-color-2: #000;
+    --popup-box-shadow-color-3: #000;
     --select-background-color-hover: #2D2D2D;
     --select-background-color-active: #252525
 }
@@ -38,9 +38,9 @@ html[data-theme=dark] {
         --initial-letter-color: #666;
         --nav-item-background-color: #60606070;
         --nav-item-background-color-hover: #52525270;
-        --popup-box-shadow-color-1: #9AA1B126;
-        --popup-box-shadow-color-2: #4c515d40;
-        --popup-box-shadow-color-3: #82879826;
+        --popup-box-shadow-color-1: #000;
+        --popup-box-shadow-color-2: #000;
+        --popup-box-shadow-color-3: #000;
         --select-background-color-hover: #2D2D2D;
         --select-background-color-active: #252525
     }
@@ -321,10 +321,12 @@ iframe {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border: 1px solid #ced4da;
+    border: 1px var(--text-color) solid;
     border-radius: .25rem;
     display: block;
-    margin: 0 auto
+    margin: 0 auto;
+    background-color: var(--background-color);
+    color: var(--text-color)
 }
 
 #settingsPopup {
