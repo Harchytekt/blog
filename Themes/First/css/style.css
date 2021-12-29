@@ -326,7 +326,8 @@ iframe {
     display: block;
     margin: 0 auto;
     background-color: var(--background-color);
-    color: var(--text-color)
+    color: var(--text-color);
+    outline: unset
 }
 
 #settingsPopup {
