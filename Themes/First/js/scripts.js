@@ -82,10 +82,18 @@ $(document).ready(function () {
     $(".internalLink").mouseenter(function () {
         if (isWithPreviews) {
             getPost($(this).attr("aria-label"));
-            setPopupPosition($(this), 1);
-            $("#internalPopup").show();
-            currentInternalLink = $(this);
+            $("#internalPopup").addClass("withPreview")
+                .removeClass("withoutPreview");
+        } else {
+            $("#internalPopup").addClass("withoutPreview")
+                .removeClass("withPreview")
+                .text(`${$(this).attr("aria-title")} (${$(this).parent().attr("href")})`);
+            $("#internalPopup * .externalLink").append(` ${iconExternalLinks}`);
+            $("#internalPopup * .internalLink").append(` ${iconInternalLinks}`);
         }
+        setPopupPosition($(this), 1);
+        $("#internalPopup").show();
+        currentInternalLink = $(this);
     }).append(` ${iconInternalLinks}`);
     $("#internalPopup").mouseenter(function () {
         setPopupPosition(currentInternalLink, 1);
@@ -99,11 +107,17 @@ $(document).ready(function () {
     // External links
     $(".externalLink").mouseenter(function () {
         if (isWithPreviews) {
-            $("#externalPopup iframe").attr('src', $(this).attr("aria-label"));
-            setPopupPosition($(this), 0);
-            $("#externalPopup").show();
-            currentExternalLink = $(this);
+            $("#externalPopup").addClass("withPreview")
+                .removeClass("withoutPreview")
+                .html(`<iframe src="${$(this).attr("aria-label")}"></iframe>`);
+        } else {
+            $("#externalPopup").addClass("withoutPreview")
+                .removeClass("withPreview")
+                .text($(this).attr("aria-label"));
         }
+        setPopupPosition($(this), 0);
+        $("#externalPopup").show();
+        currentExternalLink = $(this);
     }).append(` ${iconExternalLinks}`);
     $("#externalPopup").mouseenter(function () {
         setPopupPosition(currentExternalLink, 0);
@@ -126,8 +140,10 @@ $(document).ready(function () {
             } else if (isInternal === 0) {
                 id = "#externalPopup";
             }
-            $(id).css("top", top + 300 >= viewportHeight - 20 ? top - 280 : top)
-                .css("left", left + 400 >= viewportWidth - 20 ? left - 400 : right);
+            let height = $(id).height();
+            let width = $(id).width();
+            $(id).css("top", top + height >= viewportHeight - 20 ? top - (height - 20) : top)
+                .css("left", left + width >= viewportWidth - 20 ? left - (width - 20) : right);
         } else if (isInternal === -1) {
             $("#settingsPopup").css("top", top + 42)
                 .css("left", left - 325);
