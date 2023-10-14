@@ -46,6 +46,7 @@ $(document).ready(function () {
         setPopupPosition($("#search"), -2);
         isSearchOpen = !isSearchOpen;
         if (isSearchOpen) {
+            isSettingsOpen = false;
             $("#searchPopup").show();
             $("#searchField").focus();
             $("#settingsPopup").hide();
@@ -63,6 +64,7 @@ $(document).ready(function () {
 
         isSettingsOpen = !isSettingsOpen;
         if (isSettingsOpen) {
+            isSearchOpen = false;
             $("#settingsPopup").show();
             $("#searchPopup").hide();
 
