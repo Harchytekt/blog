@@ -191,6 +191,30 @@ h1 {
     cursor: pointer
 }
 
+figure {
+    position: relative
+}
+
+figure > img {
+    max-width: 100%;
+    border-radius: .3rem;
+    margin: auto;
+    display: block;
+    filter: brightness(50%);
+    box-shadow: 0 0 0 0 var(--popup-box-shadow-color-1), 0 4px 28px 2px var(--popup-box-shadow-color-2), 0 4px 10px -27px var(--popup-box-shadow-color-3)
+}
+
+figure > figcaption {
+    font-size: .8rem;
+    font-weight: 900;
+    padding: 0 10px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1
+}
+
 a {
     text-decoration: none;
     color: var(--text-color)
@@ -418,8 +442,8 @@ iframe {
     content: "";
     width: 0;
     height: 0;
-    border: 7px solid transparent;
-    border-color: var(--text-color) transparent transparent transparent;
+    border: 7px solid rgba(0, 0, 0, 0);
+    border-color: var(--text-color) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
     position: absolute;
     top: 10px;
     right: 10px
@@ -435,7 +459,7 @@ iframe {
 
 .select-styled:active:after, .select-styled.active:after {
     top: 2px;
-    border-color: transparent transparent var(--text-color) transparent
+    border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) var(--text-color) rgba(0, 0, 0, 0)
 }
 
 .select-options {
