@@ -2,7 +2,8 @@
     <header>
         <h1>Deuxième</h1>
         <blockquote>
-            Alexandre Ducobu — Brouillon — 09/09/2021 - 11/09/2021
+            <span title="Auteur">Alexandre Ducobu</span> — <span title="État">Brouillon</span>
+            — <span title="Publication">09/09/2021</span> - <span title="Dernière mise à jour">11/09/2021</span>
         </blockquote>
     </header>
     <div id="content">
