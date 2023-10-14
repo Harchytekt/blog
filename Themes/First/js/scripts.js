@@ -2,6 +2,8 @@ $(document).ready(function () {
     let appearance = (localStorage.getItem('appearance') !== null) ? localStorage.getItem("appearance") : "auto";
     let theme = (localStorage.getItem('theme') !== null) ? localStorage.getItem("theme") : "default";
     let isWithPreviews = (localStorage.getItem('previewState') !== null) ? (localStorage.getItem("previewState") === 'true') : true;
+    let isSearchOpen = false;
+    let isSettingsOpen = false;
 
     let currentInternalLink;
     let currentExternalLink;
@@ -25,35 +27,50 @@ $(document).ready(function () {
     });
 
     $(document).on('keydown', function (e) {
-        if (e.altKey && String.fromCharCode(e.which).toLowerCase() === 'f') {
+        if ('f' === e.key && !isSearchOpen) {
             toggleSearchInput();
-        } else if (e.altKey && String.fromCharCode(e.which).toLowerCase() === 'r') {
+        } else if ('r' === e.key && !isSettingsOpen) {
             toggleSettings();
+        } else if ('Escape' === e.key) {
+            if (isSearchOpen) {
+                e.preventDefault();
+                toggleSearchInput();
+            } else if (isSettingsOpen) {
+                e.preventDefault();
+                toggleSettings();
+            }
         }
     });
 
     function toggleSearchInput() {
         setPopupPosition($("#search"), -2);
-        $("#searchPopup").slideToggle();
-        if ($("#searchPopup").css("display") !== "none") {
+        isSearchOpen = !isSearchOpen;
+        if (isSearchOpen) {
+            $("#searchPopup").show();
             $("#searchField").focus();
+            $("#settingsPopup").hide();
+
+            setTimeout(function () {
+                $("#searchField").val("");
+            }, 50);
+        } else {
+            $("#searchPopup").hide();
         }
-        if ($("#settingsPopup").css("display") !== "none") {
-            $("#settingsPopup").slideToggle();
-        }
-        setTimeout(function () {
-            $("#searchField").val("");
-        }, 50);
     }
 
     function toggleSettings() {
         setPopupPosition($("#settings"), -1);
-        $("#settingsPopup").slideToggle();
-        if ($("#searchPopup").css("display") !== "none") {
-            $("#searchPopup").slideToggle();
+
+        isSettingsOpen = !isSettingsOpen;
+        if (isSettingsOpen) {
+            $("#settingsPopup").show();
+            $("#searchPopup").hide();
+
             setTimeout(function () {
                 $("#searchField").val("");
             }, 50);
+        } else {
+            $("#settingsPopup").hide();
         }
     }
 
