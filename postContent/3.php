@@ -19,9 +19,9 @@
         <p>This text isn’t going to remain here because it doesn't pertain to the web page. A web developer will often
             use filler text, so they can focus on the design of the web page. It will be replaced with real content
             later. Some common names for what you are reading are: filler text, placeholder text, and dummy text. </p>
-        <figure style='display: table'>
+        <figure>
             <img src="../Themes/First/img/placeholder.jpg" alt="Placeholder">
-            <figcaption style='display: table-caption; caption-side: bottom;'>A placeholder</figcaption>
+            <figcaption>A placeholder</figcaption>
         </figure>
         <p>You are currently reading text that is written in English, not Latin. We aren't quite sure what to put here
             yet. This text is only here to show you what it looks when there is text in this area of the web page. If
