@@ -2,8 +2,10 @@
     <header>
         <h1>Troisième</h1>
         <blockquote>
-            <span title="Auteur">Alexandre Ducobu</span> — <span title="État">Brouillon</span>
-            — <span title="Publication">09/09/2021</span> - <span title="Dernière mise à jour">11/09/2021</span>
+            <span title="Auteur">Alexandre Ducobu</span> —
+            <span title="État">Brouillon</span> —
+            <span title="Publication">09/09/2021</span> -
+            <span title="Dernière mise à jour">11/09/2021</span>
         </blockquote>
     </header>
     <div id="content">
