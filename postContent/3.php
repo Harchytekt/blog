@@ -11,13 +11,18 @@
             will replace this block of text with useful words so customers can learn more about the products and
             services you offer! A web developer will often use filler text, so they can focus on the design of the web
             page. It will be replaced with <a href="../index.php"><span aria-label="home" aria-title="Home"
-                                                                 class="internalLink">real content later</span></a>.</p>
+                                                                        class="internalLink">real content later</span></a>.
+        </p>
         <p>At some point someone will replace this block of text with useful words so customers can learn more about the
             products and services you offer! Don't waste too much of your time reading this placeholder text! This text
             is going to be replaced once the web page is completed. </p>
         <p>This text isn’t going to remain here because it doesn't pertain to the web page. A web developer will often
-            use filler text so they can focus on the design of the web page. It will be replaced with real content
+            use filler text, so they can focus on the design of the web page. It will be replaced with real content
             later. Some common names for what you are reading are: filler text, placeholder text, and dummy text. </p>
+        <figure style='display: table'>
+            <img src="../Themes/First/img/placeholder.jpg" alt="Placeholder">
+            <figcaption style='display: table-caption; caption-side: bottom;'>A placeholder</figcaption>
+        </figure>
         <p>You are currently reading text that is written in English, not Latin. We aren't quite sure what to put here
             yet. This text is only here to show you what it looks when there is text in this area of the web page. If
             the creator of this web page knew what to put here, they would probably not have to paste text like this
