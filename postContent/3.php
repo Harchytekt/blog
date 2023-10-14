@@ -8,8 +8,8 @@
     <div id="content">
         <p>Once the web page is complete this will read something different and more relevant. At some point someone
             will replace this block of text with useful words so customers can learn more about the products and
-            services you offer! A web developer will often use filler text so they can focus on the design of the web
-            page. It will be replaced with <a href="1.php"><span aria-label="1" aria-title="Premier"
+            services you offer! A web developer will often use filler text, so they can focus on the design of the web
+            page. It will be replaced with <a href="../index.php"><span aria-label="home" aria-title="Home"
                                                                  class="internalLink">real content later</span></a>.</p>
         <p>At some point someone will replace this block of text with useful words so customers can learn more about the
             products and services you offer! Don't waste too much of your time reading this placeholder text! This text
