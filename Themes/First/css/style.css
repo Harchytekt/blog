@@ -192,7 +192,8 @@ h1 {
 }
 
 figure {
-    position: relative
+    display: grid;
+    margin: auto
 }
 
 figure > img {
@@ -208,11 +209,8 @@ figure > figcaption {
     font-size: .8rem;
     font-weight: 900;
     padding: 0 10px;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1
+    z-index: 1;
+    text-align: center
 }
 
 a {
