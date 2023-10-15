@@ -16,6 +16,7 @@
   --header-fonts: Recursive, sans-serif
   --body-fonts: "Roboto Slab", serif
   --footer-fonts: "Courier Prime", monospace
+  --img-brightness: 100%
 
 html[data-theme='dark']
   --background-color: #202020
@@ -28,6 +29,7 @@ html[data-theme='dark']
   --popup-box-shadow-color-3: #000
   --select-background-color-hover: #2D2D2D
   --select-background-color-active: #252525
+  --img-brightness: 50%
 
 @media (prefers-color-scheme: dark)
   :root
@@ -41,6 +43,7 @@ html[data-theme='dark']
     --popup-box-shadow-color-3: #000
     --select-background-color-hover: #2D2D2D
     --select-background-color-active: #252525
+    --img-brightness: 50%
 
   html[data-theme='light']
     color-scheme: light dark
@@ -60,3 +63,4 @@ html[data-theme='dark']
     --header-fonts: Recursive, sans-serif
     --body-fonts: "Roboto Slab", serif
     --footer-fonts: "Courier Prime", monospace
+    --img-brightness: 100%
