@@ -15,7 +15,8 @@
     --title-fonts: Fraunces, serif;
     --header-fonts: Recursive, sans-serif;
     --body-fonts: "Roboto Slab", serif;
-    --footer-fonts: "Courier Prime", monospace
+    --footer-fonts: "Courier Prime", monospace;
+    --img-brightness: 100%
 }
 
 html[data-theme=dark] {
@@ -28,7 +29,8 @@ html[data-theme=dark] {
     --popup-box-shadow-color-2: #000;
     --popup-box-shadow-color-3: #000;
     --select-background-color-hover: #2D2D2D;
-    --select-background-color-active: #252525
+    --select-background-color-active: #252525;
+    --img-brightness: 50%
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,7 +44,8 @@ html[data-theme=dark] {
         --popup-box-shadow-color-2: #000;
         --popup-box-shadow-color-3: #000;
         --select-background-color-hover: #2D2D2D;
-        --select-background-color-active: #252525
+        --select-background-color-active: #252525;
+        --img-brightness: 50%
     }
 
     html[data-theme=light] {
@@ -62,7 +65,8 @@ html[data-theme=dark] {
         --title-fonts: Fraunces, serif;
         --header-fonts: Recursive, sans-serif;
         --body-fonts: "Roboto Slab", serif;
-        --footer-fonts: "Courier Prime", monospace
+        --footer-fonts: "Courier Prime", monospace;
+        --img-brightness: 100%
     }
 }
 
@@ -201,7 +205,7 @@ figure > img {
     border-radius: .3rem;
     margin: auto;
     display: block;
-    filter: brightness(50%);
+    filter: brightness(var(--img-brightness));
     box-shadow: 0 0 0 0 var(--popup-box-shadow-color-1), 0 4px 28px 2px var(--popup-box-shadow-color-2), 0 4px 10px -27px var(--popup-box-shadow-color-3)
 }
 
