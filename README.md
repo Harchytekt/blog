@@ -9,7 +9,8 @@ First, I had a simple idea of a blog with a sidebar and settings:
 
 Then, I went for a simpler design: no more sidebar.  
 I also wanted to have previews of links before clicking on them:  
-![Second draft](Previews/draft_2.png "Second draft (light, desktop)")
+![Second draft](Previews/draft_2.png "Second draft (hand drawn, digital)") 
+![Third draft](Previews/draft_3.png "Third draft (light, desktop)")
 
 ### Design
 
